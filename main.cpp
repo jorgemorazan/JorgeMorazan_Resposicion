@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+#include "Racional.h"
 int main(){
 	cout<<"Bienvenido a este programa maravilloso de Racionales..."<<endl;
 	cout<<"¿Cansado de hacer sumas, restas, multiplicaciones y divisiones de racionales? ¡Este programa le ayudará hacer esto!"<<endl;
@@ -27,7 +27,7 @@ int main(){
 			}while(sure!=1);
 		}//fin ingresar numeros
 		if(opc==2){
-			
+
 		}
 
 	}while(opc!=5);
