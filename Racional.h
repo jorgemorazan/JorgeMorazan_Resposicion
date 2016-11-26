@@ -15,6 +15,10 @@ class Racional {
 		void operator*(Racional ratio);
 		void operator/(Racional ratio);
 		void imprimirRespuesta();
+		void setNumerador(int);
+		int getNumerador();
+		void setDenominador(int);
+		int getDenominador();
 };
 
 #endif

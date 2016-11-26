@@ -7,8 +7,8 @@ Racional::Racional(){
 }
 
 Racional::Racional(int a, int b){
-	num=a;
-	den=b;
+	int num=a;
+	int den=b;
 }
 
 void operator+(Racional ratio){
