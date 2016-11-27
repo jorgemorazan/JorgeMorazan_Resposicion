@@ -15,7 +15,6 @@ int main(){
 			int sure=0;
 			int numA=0,denA=0,numB=0,denB=0;
 			do{
-				U
 				cout<<"Ingrese su numerador de la primera racional: ";
 				cin>>numA;
 				cout<<"Ingrese su denominador de la primera racional: ";
