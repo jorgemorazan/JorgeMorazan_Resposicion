@@ -1,4 +1,4 @@
-#ifndef RACIONAL
+#ifndef RACIONAL_H
 #define RACIONAL_H
 #include <iostream>
 using namespace std;
@@ -9,12 +9,12 @@ class Racional {
 		int den;
 	public:
 		Racional();
-		Racional(int a, int b);
-		void operator+(Racional ratio);
-		void operator-(Racional ratio);
-		void operator*(Racional ratio);
-		void operator/(Racional ratio);
-		void imprimirRespuesta();
+		Racional(int,int);
+		//Racional* operator+(Racional);
+		Racional* operator-(Racional);
+		void operator*(Racional);
+		void operator/(Racional);
+		void imprimirRespuesta(Racional*);
 		void setNumerador(int);
 		int getNumerador();
 		void setDenominador(int);

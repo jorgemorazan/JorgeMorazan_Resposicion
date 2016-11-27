@@ -6,49 +6,65 @@ Racional::Racional(){
 
 }
 
-Racional::Racional(int a, int b){
-	int num=a;
-	int den=b;
+Racional::Racional(int num, int den){
+	this->num=num;
+	this->den=den;
 }
 
-void operator+(Racional ratio){
-	Racional respuesta;
-	respuesta.num = (a*ratio.den)+(b*ratio.num);
-	respuesta.den = (b*ratio.den);
+void Racional::setNumerador(int a){
+	num = a;
+}
+
+int Racional::getNumerador(){
+	return num;
+}
+
+void Racional::setDenominador(int b){
+	den = b;
+}
+
+int Racional::getDenominador(){
+	return den;
+}
+
+void Racional::operator+(Racional ratio){
+	Racional* respuesta= new Racional();
+	respuesta->setNumerador(num*ratio.getDenominador())+(den*ratio.getNumerador());
+	respuesta->setDenominador(den*ratio.getDenominador());
 	imprimirRespuesta(respuesta);
 }
 
-void operator-(Racional ratio){
-	Racional respuesta;
-	respuesta.num = (a*ratio.den)-(b*ratio.num);
-	respuesta.den = (b*ratio.den);
+void Racional::operator-(Racional ratio){
+	Racional* respuesta = new Racional();
+	respuesta->setNumerador((num*ratio.getDenominador())-(den*ratio.numerador()));
+	respuesta->setDenominador(den*ratio.getDenominador());
 	imprimirRespuesta(respuesta);
 }
 
-void operator*(Racional ratio){
-	Racional respuesta;
-	respuesta.num = (a*ratio.num);
-	respuesta.den = (b*ratio.den);
+void Racional::operator*(Racional ratio){
+	Racional* respuesta = new Racional();
+	respuesta->setNumerador(num*ratio.getNumerador());
+	respuesta->setDenominador(den*ratio.getDenominador());
 	imprimirRespuesta(respuesta);
 }
 
-void operator/(Racional ratio){
-	Racional respuesta;
-	respuesta.num = (a*ratio.den);
-	respuesta.den = (b*ratio.num);
+void Racional::operator/(Racional ratio){
+	Racional* respuesta = new Racional();
+	respuesta->setNumerador(num*ratio.getDenominador());
+	respuesta->setDenominador(den*ratio.getNumerador());
 	imprimirRespuesta(respuesta);
 }
 
-void imprimirRespuesta(Racional respuesta){
-	int numerador = respuesta.num;
-	int denominador = respuesta.den;
+void Racional::imprimirRespuesta(Racional* respuesta){
+	int numerador = respuesta.getNumerador();
+	int denominador = respuesta.getDenominador();
 	while(b!=0){
 		int residuo = numerador%denominador;
 		numerador = denominador;
 		denominador = residuo
 	}
-	int rNum = respuesta.num;
-	int rDen = respuesta.den;
+	int rNum = respuesta.getNumerador();
+	int rDen = respuesta.getDenominador();
 	rNum = rNum/numerador;
 	rDen = rDen/numerador;
 	cout<<"Respuesta: "<<rNum<<"/"<<rDen;

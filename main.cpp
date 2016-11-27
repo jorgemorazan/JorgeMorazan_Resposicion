@@ -2,6 +2,8 @@
 using namespace std;
 #include "Racional.h"
 int main(){
+	Racional* R1 = NULL;
+	Racional* R2 = NULL;
 	cout<<"Bienvenido a este programa maravilloso de Racionales..."<<endl;
 	cout<<"¿Cansado de hacer sumas, restas, multiplicaciones y divisiones de racionales? ¡Este programa le ayudará hacer esto!"<<endl;
 	int opc = 0;
@@ -27,12 +29,13 @@ int main(){
 				cout<<"Ingrese 1 si está de acuerdo";
 				cin>>sure;
 			}while(sure!=1);
-			Racional* R1 = new Racional(numA,denA);
-			Racional* R2 = new Racional(numB,denB);
+			R1 = new Racional(numA,denA);
+			R2 = new Racional(numB,denB);
 		}//fin ingresar numeros
 		if(opc==2){
-			
-			*R1+*R2;
+			//Racional* respuesta;
+			//respuesta=*R1+*R2;
+			//respuesta= *R1-*R2;
 		}
 
 	}while(opc!=5);
