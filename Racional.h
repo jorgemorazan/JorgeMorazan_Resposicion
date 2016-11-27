@@ -11,7 +11,7 @@ class Racional {
 		Racional();
 		Racional(int,int);
 		//Racional* operator+(Racional);
-		Racional* operator-(Racional);
+		void operator-(Racional);
 		void operator*(Racional);
 		void operator/(Racional);
 		void imprimirRespuesta(Racional*);
